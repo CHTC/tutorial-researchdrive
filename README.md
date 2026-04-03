@@ -174,10 +174,105 @@ Note how the output looks different from that of the Unix `ls` command.
 
 If you want to see the contents of a directory in your ResearchDrive, you have to first `cd` into that directory.
 
-### Downloading data from ResearchDrive to CHTC
+> [!TIP]
+> If you tab-autocomplete a directory name, you will see a backslash (`\`) appear at the end of the name, when usually in Unix you see a forward slash (`/`).
+> Either one is acceptable in this case.
 
+### Downloading a file from ResearchDrive to CHTC
 
+To download a file from ResearchDrive, run
 
+```bash
+get <file>
+```
+
+where `<file>` is the name of - or path to - a file in your ResearchDrive.
+
+Optionally, you can change how the file is named in your CHTC directory with
+
+```bash
+get <file> <newname>
+```
+
+By default, the file will be returned to the directory **where you ran the `smbclient` command**.
+You can have the file returned to a different location by using a relative or absolute path:
+
+```bash
+get <file> /home/yourNetID/<newname>
+```
+
+> [!WARNING]
+> Make sure you use the forward slash (`/`) in this case.
+> If you use a backslash (`\`) in the path, you'll create a file in the initial directory with a backslash in its name!
+
+> [!TIP]
+> Tab-autocomplete should work as expected for specifying the file in ResearchDrive or the location in CHTC to transfer it to!
+
+### Downloading many files from ResearchDrive to CHTC
+
+To download more than one file at a time, you cannot just use the `get` command.
+
+You need to use the `mget` command.
+
+With the `mget` command, you can specify multiple names at a time, either by listing them one at a time or by using a "glob".
+
+For example, to download all the files from your current ResearchDrive directory that end with `.txt`, you would use
+
+```bash
+mget *.txt
+```
+
+**But** the default behavior is to *prompt you to confirm every single transfer* (!).
+
+To disable this prompt, run the command
+
+```bash
+prompt
+```
+
+> [!TIP]
+> The `prompt` command is an invisible "toggle" - it won't tell you whether prompting is on or off!
+> The first time you run the command in the `smbclient` session, you will toggle the state from "on" (the default) to "off".
+> The second time, you'll toggle the state from "off" to "on", and so on and so forth.
+> If you forget which state the toggle is in, just exit and restart the `smbclient` command line to reset the state to the default of "on".
+
+Now when you run the `mget` command, it will just do the transfers instead of prompting you to confirm each one.
+
+### Uploading a file from CHTC to ResearchDrive
+
+You can use the `put` command to transfer files from CHTC to ResearchDrive.
+
+When you are using the `smbclient`, you can't `ls` your files & directories on CHTC.
+However, you can use the tab-autocomplete functionality to display the possible autofill options.
+
+If you launched the `smbclient` in the same directory as the file, and you remember the filename, you can just run
+
+```bash
+put <file>
+```
+
+You can also specify a different name to save the file in ResearchDrive
+
+```bash
+put <file> <newname>
+```
+
+You can also specify paths - remember to use forward slashes for specifying locations on CHTC.
+
+### Uploading many files from CHTC to ResearchDrive
+
+We complete the square with the `mput` command.
+
+* `put` is for uploading one file, `mput` is for many files
+* You can use globs (e.g., `*`) to transfer files based on a pattern
+* The `prompt` toggle affects the `mput` command as well for user confirmation
+
+For example, if you have a bunch of `.csv` files in your CHTC directory you want to upload to ResearchDrive,
+you could use
+
+```bash
+mput *.csv
+```
 
 ## Automated transfers
 

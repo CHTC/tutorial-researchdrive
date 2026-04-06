@@ -43,7 +43,7 @@ The PI of the research group (or their designate) control the access to their Re
 
 > [!NOTE]
 > CHTC does not manage ResearchDrive!
-> If you have questions about the account process or getting access, you should contact the ResearchDrive team at [researchdrive@wisc.edu][mailto:researchdrive@wisc.edu].
+> If you have questions about the account process or getting access, you should contact the ResearchDrive team at [researchdrive@wisc.edu](mailto:researchdrive@wisc.edu).
 
 ### Accessing ResearchDrive
 

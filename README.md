@@ -50,7 +50,7 @@ The PI of the research group (or their designate) control the access to their Re
 There are a few ways of accessing data in ResearchDrive, but the most common is "mounting" the drive to your computer as a network drive.
 Once mounted, ResearchDrive appears as just another folder on your computer that you can interact with.
 
-![Windows Explorer view of a mounted ResearchDrive folder]()
+![Windows Explorer view of a mounted ResearchDrive folder](.images/researchdrive-mounted-windows.png)
 
 Setting this up is not the focus of our training; if you are interested in this, see their guides [for Windows](https://kb.wisc.edu/researchdata/96187), [for MacOS](https://kb.wisc.edu/researchdata/96187), or [for Linux](https://kb.wisc.edu/researchdata/95148).
 

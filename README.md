@@ -2,6 +2,8 @@
 
 Learn how to use the computing power of CHTC with the data you keep in ResearchDrive.
 
+[Slides for April 7th training](https://docs.google.com/presentation/d/1_Q5Xo6_tH7iPAlsANH6K469Wl9VS6zDNxVR9xG7A8QM/edit?usp=sharing)
+
 ## Overview
 
 * [What is ResearchDrive?](#what-is-researchdrive)
